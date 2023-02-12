@@ -1,0 +1,696 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;0,900;1,100;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Kanit, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    user-select: none;
+
+}
+
+body {
+    margin: 0;
+}
+
+.container {
+    max-width: 1300px;
+    margin: auto;
+}
+
+header {
+    background-color: black;
+}
+
+header .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.logo-nav {
+    transform: translate(0px, top);
+    height: 150px;
+}
+
+header nav {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    overflow: hidden;
+    padding: 20px 7%;
+    padding-bottom: 25px;
+    z-index: -1;
+    top: -100vh;
+
+}
+
+header nav .toggle button {
+    padding-top: 10px;
+    float: right;
+    display: flex;
+    flex-direction: column;
+    width: 3rem;
+    height: 3rem;
+    border: 0;
+    background: transparent;
+    gap: .65rem;
+}
+
+header nav .toggle button>div {
+    background: rgb(255, 255, 255);
+    height: 2px;
+    width: 100%;
+    border-radius: 5px;
+    transition: all .5s;
+    transform-origin: left;
+}
+
+header nav .toggle button:hover div:first-child {
+    transform: rotate(45deg);
+}
+
+header nav .toggle button:hover div:nth-child(2) {
+    opacity: 0;
+}
+
+header nav .toggle button:hover div:last-child {
+    transform: rotate(-45deg);
+}
+
+header a {
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: regular;
+    color: white;
+    font-size: 1.25rem;
+}
+
+#inicio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 100vh;
+    padding: 20px;
+    background-image: url(img/imagen2.jpg);
+    background-color: rgb(38, 38, 38);
+    background-blend-mode: soft-light;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+#inicio h1 {
+    line-height: 1;
+    font-size: 4.0rem;
+    color: white;
+}
+
+#inicio p {
+    font-size: 1.3rem;
+    color: white;
+}
+
+#servicios {
+    align-items: center;
+    color: white;
+    background-color: rgb(27, 27, 27);
+
+}
+
+#servicios h3 {
+    font-size: 1.7rem;
+}
+
+#servicios p {
+    font-size: 1.3rem;
+    line-height: 25px;
+    font-weight: 200;
+
+}
+
+#servicios .container {
+    text-align: center;
+    padding: 80px 10px;
+}
+
+.titulos {
+    font-size: 2.6rem;
+}
+
+.titulos h1 {
+    font-weight: 400;
+}
+
+#servicios .titulos {
+    padding-bottom: 20px;
+    line-height: 1;
+}
+
+#servicios .cartas-container {
+    display: grid;
+    gap: 2.0rem;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+
+#servicios .cartas {
+    display: grid;
+    text-align: center;
+    background-color: rgb(20, 19, 19);
+    padding: 1.5rem;
+    border-radius: 9px;
+    transition: all 0.25s;
+}
+
+#servicios .cartas:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.3);
+}
+
+#nosotros .container {
+    text-align: center;
+    padding: 80px 10px;
+}
+
+#el-estudio {
+    color: white;
+    background-image: url(img/imagen5blue.png);
+    background-color: rgb(21, 21, 21);
+    background-blend-mode: soft-light;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+#el-estudio .descripcion-estudios {
+    padding: 30px;
+    font-size: 1.4rem;
+    line-height: 1;
+
+}
+
+#el-estudio .estudios-container {
+    display: grid;
+    gap: 2.0rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+#el-estudio .estudios .divisor-estudio {
+    margin: auto;
+    max-width: 300px;
+}
+
+#el-estudio .estudios {
+    padding: 15px;
+}
+
+#el-estudio img {
+    padding: 30px;
+    height: 500px;
+    width: 100%;
+    max-width: 890px;
+}
+
+#el-estudio h3 {
+    font-weight: 200;
+    font-size: 2.4rem;
+}
+
+#el-estudio .estudios p {
+    font-size: 1.5rem;
+}
+
+#el-estudio .container {
+    text-align: center;
+    padding: 80px 10px;
+}
+
+#el-estudio .titulos {
+    font-size: clamp(1.3rem, 2.5rem, 2.8rem);
+
+}
+
+#discografia {
+    background-color: rgb(12, 12, 12);
+    text-align: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+}
+
+#discografia .titulos {
+    padding-top: 80px;
+}
+
+#discografia .portada {
+    padding: 20px;
+}
+
+#discografia .portada h2 {
+    font-weight: 200;
+}
+
+#nosotros {
+    color: white;
+    background-image: url(img/imagen6blue.png);
+    background-color: rgb(21, 21, 21);
+    background-blend-mode: soft-light;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+}
+
+#nosotros .container {
+    text-align: center;
+    padding: 80px 10px;
+}
+
+#nosotros .titulos {
+    line-height: 1;
+    padding-bottom: 30px;
+}
+
+#nosotros img {
+    width: 300px;
+    height: 300;
+}
+
+#nosotros .imagen-bio {
+    width: 100%;
+}
+
+#nosotros .biografias {
+    user-select: text;
+    padding-top: 40px;
+    display: grid;
+    grid-auto-flow: dense;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+    gap: 2.0rem;
+}
+
+#nosotros h2 {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+#nosotros h3 {
+    color: rgb(207, 207, 207);
+    margin: 20px;
+    font-size: 1.4rem;
+}
+
+#nosotros p {
+    padding: 10px;
+    text-align: justify;
+    font-size: 1.3rem;
+    line-height: 25px;
+    font-weight: 200;
+}
+
+#nosotros .biografias .biografia {
+    background-color: rgba(0, 0, 0, 0.572);
+    border: 0.001cm;
+    height: auto;
+    overflow: hidden;
+    margin: 20px;
+    transition: all 0.25s;
+}
+
+#nosotros .biografias .biografia:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgb(77, 76, 76);
+}
+
+#nosotros .biografias img {
+    width: auto;
+    height: 400px;
+}
+
+#nosotros .biografia hr {
+    margin: auto;
+    max-width: 150px;
+}
+
+#nosotros .divisor-redes {
+    background-color: transparent;
+    color: transparent;
+}
+
+#nosotros .hide {
+    display: none;
+}
+
+#nosotros .readMore_btn {
+    gap: 50px;
+    padding-right: 40px;
+    padding: 8px;
+    margin: 0 0;
+    border: 2px solid gray;
+    background-color: rgb(120, 120, 120);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    transition: all .3s;
+    font-size: 1rem;
+}
+
+#nosotros .readMore_btn:hover {
+    background: black;
+    color: white;
+}
+
+#nosotros .redes-nosotros img {
+    padding-top: 15px;
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+}
+
+
+
+
+#contacto .container {
+    padding: 20px 0;
+    max-width: 400px;
+}
+
+#contacto {
+    height: 100vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    background-image: url(img/imagenblue.png);
+    background-color: rgb(85, 85, 85);
+    background-blend-mode: soft-light;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+#contacto .form {
+    padding: 20px 30px;
+    background-color: rgb(21, 21, 21);
+    width: 350px;
+}
+
+#contacto input {
+    width: auto;
+    padding: 10px;
+    box-sizing: border-box;
+    background: none;
+    outline: none;
+    resize: none;
+    color: white;
+    font-size: 1.4rem;
+    border: 0;
+    transition: all .3s;
+    border-bottom: 2px solid rgb(185, 185, 185);
+}
+
+#contacto input:focus {
+    border-bottom: 2px solid lightblue;
+}
+
+#contacto p:before {
+    content: attr(type);
+    display: block;
+    margin: 28px 0 0;
+    font-size: 1.2rem;
+    color: gray;
+}
+
+#contacto button {
+    padding: 12px;
+    margin: 8px 0 0;
+    border: 2px solid gray;
+    background-color: rgb(120, 120, 120);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    transition: all .3s;
+    font-size: 1.3rem;
+}
+
+#contacto button:hover {
+    background: black;
+    color: white;
+}
+
+#contacto .info {
+    display: none;
+    position: fixed;
+    bottom: -15px;
+    right: -20px;
+    background: black;
+    color: white;
+    width: 320px;
+    padding: 16px 4px 16px 0;
+    border-radius: 6px;
+    font-size: 13px;
+    box-shadow: 10px 10px 40px -14px #000;
+}
+
+#contacto span {
+    margin: 0 5px 0 15px;
+}
+
+#contacto .descripcion-contacto {
+    padding: 30px;
+    font-size: 1.4rem;
+    line-height: 1;
+
+}
+
+#playlists {
+    padding: 40px;
+    text-align: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    background: rgb(0, 0, 0);
+    background: linear-gradient(151deg, rgb(0, 0, 0) 0%, rgb(23, 23, 23) 35%, rgb(39, 39, 39) 100%);
+
+}
+
+#playlists .playlist-container {
+    display: grid;
+    gap: 2.0rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+#playlists .titulos {
+    margin: 20px;
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+#playlists .play h2 {
+    font-size: 1.2rem;
+    font-weight: 200;
+
+}
+
+#playlists .spotifyPlaylist {
+    width: 80px;
+    height: 80px;
+    padding: 20px;
+}
+
+
+footer {
+    padding: 30px;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+footer .red h2 {
+    font-size: 20px;
+    color: white;
+    font-weight: 300;
+}
+
+footer .red a img {
+    width: 35px;
+    margin: 10px;
+}
+
+footer .info {
+    padding: 10px;
+    color: gray;
+}
+
+footer .marca {
+    padding: 10px;
+    color: lightgray
+}
+
+footer .marca a {
+    color: white;
+    margin: 2px;
+    text-decoration: none;
+}
+
+footer .marca a:hover {
+    color: rgb(95, 95, 95);
+    margin: 2px;
+    text-decoration: none;
+}
+
+.section-boton-arriba {
+    position: fixed;
+    bottom: 6rem;
+    right: 2rem;
+    width: 1.4rem;
+    height: 0.3rem;
+    z-index: -1;
+}
+
+.boton-arriba {
+    width: 0rem;
+    height: 0rem;
+    background: rgb(182, 182, 239);
+    border-radius: 20%;
+    cursor: pointer;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.boton-arriba a {
+    position: absolute;
+    font-size: 1.7rem;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    color: #fff;
+    transition: .2s;
+}
+
+.show {
+    z-index: 10;
+}
+
+.show .boton-arriba {
+    animation: popup .3s ease-in-out;
+    width: 4rem;
+    height: 4rem;
+    z-index: 11;
+}
+
+.show a {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+@keyframes popup {
+    0% {
+        width: 0rem;
+        height: 0rem;
+    }
+
+    50% {
+        width: 6rem;
+        height: 6rem;
+    }
+
+    100% {
+        width: 4rem;
+        height: 4rem;
+    }
+}
+
+
+@media (min-width: 850px) {
+    header {
+        position: absolute;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.572);
+    }
+
+    header .container {
+        flex-direction: row;
+    }
+
+    header nav {
+        justify-content: center;
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        padding: 0;
+    }
+
+    header ul {
+        flex-direction: row;
+        display: flex;
+        align-items: center;
+        list-style: none;
+    }
+
+    header a {
+        display: flex;
+        text-align: center;
+    }
+
+    header .boton:hover {
+        background-color: white;
+        color: black
+    }
+
+    header nav .toggle button {
+        display: none;
+    }
+
+    #contacto .container {
+        padding: 20px 0;
+        max-width: 900px;
+    }
+
+    #contacto .form {
+        padding: 20px 30px;
+        background-color: rgb(21, 21, 21);
+        width: 900px;
+    }
+
+    #discografia .portada {
+        padding: 0;
+        margin-bottom: 20px;
+    }
+
+    #discografia .portada-container {
+        justify-content: center;
+        align-items: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        display: grid;
+        gap: 4rem;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        align-items: center;
+        flex-direction: row;
+    }
+
+    #discografia #center {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .section-boton-arriba {
+        bottom: 6rem;
+        right: 12rem;
+        width: 1.4rem;
+        height: 0.3rem;
+    }
+    
+
+}
